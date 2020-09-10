@@ -32,7 +32,7 @@ def get_package(max_apk=500,price="free",threads=5):
 
     for page in range(1,max_apk,20): # page starts from 1 not 0 
         # Just dump all async request into the "queue" dict
-        queue.append(session.get('https://www.androidrank.org/app/ranking/all?start={}&price={}'.format(page,price)))
+        queue.append(session.get('https://www.androidrank.org/android-most-popular-google-play-apps?start={}&price={}'.format(page,price)))
        
     # Then, grab all the response from the queue
     for page in range(len(queue)):
